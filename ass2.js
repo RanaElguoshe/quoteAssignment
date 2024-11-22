@@ -9,14 +9,24 @@ let quoteDetail=[
 
 
 ]
+let random1=0;
+let nandomNumber=0;
 //console.log(quoteDetail[Math.floor(Math.random() * quoteDetail.length +1)].quote)
 function getRandom() {
  // document.getElementById('quote').innerHTML=quoteDetail[1].quote
- let nandomNumber=Math.floor(Math.random() * quoteDetail.length)
+ //let nandomNumber=Math.floor(Math.random() * quoteDetail.length)
+ do{
+  nandomNumber=Math.floor(Math.random() * quoteDetail.length)
+
+}
+while(nandomNumber==random1)
+  random1=nandomNumber
+
 //console.log(quoteDetail.length)
 console.log(nandomNumber)
     document.getElementById('quote').innerHTML=`${quoteDetail[nandomNumber].quote}`;
     document.getElementById('author').innerHTML=`${quoteDetail[nandomNumber].author}`;
 
   }
+
 
